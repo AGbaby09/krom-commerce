@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./styles/style.css">
+        <title>Shop from Krom Club</title>
+    </head>
+    <body>
+
+        <header class="fxd">
+            <nav class="rel">
+                <div id="top" class="rel between">
+                    <div id="contacts" class="rel between">
+                        <div class="call between">
+                            <i class='bx bxl-gmail' ></i>
+                            <a href="#">agbotsem@gmail.com</a>
+                        </div>
+                        <div class="mail between">
+                            <i class='bx bxs-phone' ></i>
+                            <p>+233 50 601 6100</p>
+                        </div>
+                    </div>
+                    <ul id="links" class=" rel between">
+                        <li class="center rel"><a href="#">ABOUT US</a></li>
+                        <li class="center rel"><a href="#">CONTACT US</a></li>
+                        <li class="center rel"><a id="login-button" href="#">LOGIN</a></li>
+                    </ul>
+                </div>
+                <div id="bottom" class="rel between">
+                    <div id="logo" class="center font1">
+                        <i class='bx bx-globe' ></i>
+                        <p>Krom Club</p>
+                    </div>
+                    <div id="categories" class="rel between">
+                        <button class="center">ALL</button>
+                        <button class="center">THRIFT</button>
+                        <button class="center">BURNERS</button>
+                        <button class="center">LABS</button>
+                    </div>
+                    <div id="icons" class=" rel between">
+                        <button class="center"><i class='bx bx-heart' ></i></button>
+                        <button class="center"><i class='bx bx-cart-alt'></i></button>
+                        <button class="center"><i class='bx bx-search'></i></button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <article id="login-article" class="abs size-f invisible">
+            <div id="login" class="abs">
+                <div class="between rel">
+                    <div class="center font1">
+                        <i class='bx bx-globe' ></i>
+                        <p>Krom Club</p>
+                    </div>
+
+                    <button class="center" onclick="closeLoginButton()">
+                        <i id="close-login" class='bx bx-x' ></i>
+                    </button>
+                </div>
+                <form action="" class="rel">
+                    <p>Sign in to purchase items</p>
+
+                    <div>
+                        <p class="al-c">Email</p>
+                        <input type="email" title="email">
+                    </div>
+                    <div>
+                        <p class="al-c">Password</p>
+                        <input type="password" title="password">
+                    </div>
+
+                    <button>Login</button>
+
+                    <h4 class="between">Forgotten password? <a href="#">Click Here</a></h4>
+                    
+                </form>
+
+                <button href="#" class="abs center" onclick="signup()">Create an account</button>
+            </div>
+        </article>
+
+        <article id="signup-article" class="abs size-f invisible">
+            <div id="signup" class="abs">
+                <div class="between rel">
+                    <div class="center font1">
+                        <i class='bx bx-globe' ></i>
+                        <p>Krom Club</p>
+                    </div>
+
+                    <button class="center" onclick="closeSignupButton()">
+                        <i id="close-signup" class='bx bx-x' ></i>
+                    </button>
+                </div>
+                <form action="" class="rel">
+                    <p>Create an account with us</p>
+
+                    <div>
+                        <p class="al-c">Full Name</p>
+                        <input type="text" title="email">
+                    </div>
+                    <div>
+                        <p class="al-c">Email</p>
+                        <input type="email" title="email">
+                    </div>
+                    <div>
+                        <p class="al-c">Password</p>
+                        <input type="password" title="password">
+                    </div>
+                    <div>
+                        <p class="al-c">Confirm Password</p>
+                        <input type="password" title="password">
+                    </div>
+
+                    <button>Create</button>
+                    
+                </form>
+
+                <button href="#" class="abs center" onclick="logit()">Log into account</button>
+            </div>
+        </article>
+
+        <main id="carousel" class="rel hidden center">
+            <div class="slide-me size-f abs al-c">
+                <img class="abs" src="./assets/images/thrift.jpg" alt="">
+                <img class="abs" src="./assets/images/burners.jpg" alt="">
+                <img class="abs" src="./assets/images/Labs.JPG" alt="">
+                <img class="abs" src="./assets/images/car2.jpg" alt="">
+            </div>
+            <section class="rel hidden">
+                <div class="text abs">
+                    <p class="center font1">SHOP</p>
+                    <h1 id="carouselText" class="font1 center">thrift</h1>
+                    <p class="center font1">FROM US</p>
+                </div>
+                <div class="slide-me size-f rel al-c center">
+                    <img class="abs" src="./assets/images/thrift.jpg" alt="">
+                    <img class="abs" src="./assets/images/burners.jpg" alt="">
+                    <img class="abs" src="./assets/images/Labs.JPG" alt="">
+                    <img class="abs" src="./assets/images/car2.jpg" alt="">
+                </div>e
+            </section>
+        </main>
+
+        
+
+        <section id="items-list" class="rel">
+
+        </section>
+        
+
+        <script src="./scripts/script.js"></script>
+    </body>
+</html>

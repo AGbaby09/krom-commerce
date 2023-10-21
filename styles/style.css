@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,900,50&display=swap'); /*font-family: 'Poppins', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@700&display=swap'); /*font-family: 'Cherry Swash', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap'); /*font-family: 'Alfa Slab One', serif;*/
+@font-face {
+    font-family: ematane;
+    src: url("../assets/fonts/Fatal\ Fighter.otf");
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style-type: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.hidden{
+    overflow: hidden;
+}
+.abs{
+    position: absolute;
+}
+.rel{
+    position: relative;
+}
+.fxd{
+    position: fixed;
+}
+.al-c{
+    display: flex;
+    align-items: center;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.evenly{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.bR{
+    border:1px solid red;
+}
+.bT{
+    border:1px solid teal;
+}
+.size-f{
+    width: 100%;
+    height: 100%;
+}
+.font1{
+    font-family: ematane;
+}
+.invisible{
+    display: none;
+}
+.visible{
+    display: flex;
+}
+/* end of custom */
+
+
+/* Desktop view styling */
+header{
+    width: 100%;
+    height: 12%;
+    top: 0;
+    background-color: white;
+    /* border-bottom: 1px solid black; */
+    z-index: 5;
+}
+header nav{
+    width: 70%;
+    height: 100%;
+    margin: 0 15%;
+}
+header nav>div{
+    width: 100%;
+    height: 50%;
+}
+div#top>#contacts{
+    height: 100%;
+    width: 28%;
+}
+#contacts>div>p, #contacts>div>a{
+    font-size: 1.5vh;
+}
+#links{
+    height: 100%;
+    width: 30%;
+}
+#links>li{
+    height: 100%;
+    width:33.3%;
+}
+#links>li>a{
+    font-size: 1.5vh;
+}
+#links>li:last-child>a{
+    box-shadow: 0 0 1px 1px rgb(0, 0, 0, 0.7);
+    padding: 5% 25%;
+    border-radius: 5vh;
+    color: rgb(255, 255, 255, 0.8);
+    background: black;
+    transition: 0.3s ease;
+}#links>li:last-child>a:hover{
+    color: white;
+}
+#logo{
+    font-size: 3vh;
+}
+#categories{
+    height: 100%;
+    width: 30%;
+}
+#categories>button{
+    font-size: 1.5vh;
+    padding: 2% 4.5%;
+    border-radius: 0.5vh;
+    border: 0.1px solid black;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+#categories>button:hover{
+    transform: translate(2%, -2%);
+    box-shadow: -2px 2px 1px 1px black;
+}
+#icons{
+    width: 10%;
+    height: 100%;
+}
+#icons>button{
+    padding: 3%;
+    background-color: transparent;
+    border-radius: 0.5vh;
+    border: 0.1px solid black;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+#icons>button:hover{
+    transform: translate(2%, -2%);
+    box-shadow: -2px 2px 1px 1px black;
+}
+#icons>button>i{
+    font-size: 2.5vh;
+}
+
+
+article#login-article{
+    background: rgb(0, 0, 0, 0.7);
+    z-index: 10;
+}
+article>#login{
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    backdrop-filter: blur(10.3px);
+    -webkit-backdrop-filter: blur(10.3px);
+    animation: slide 0.5s ease;
+}
+#login>div>div{
+    font-size: 2.5vh;
+    margin-left: 2.5%;
+}
+#login>div>button{
+    background-color: transparent;
+    padding: 1%;
+    font-size: 7vh;
+    border: none;
+    cursor: pointer;
+}
+#login form{
+    width: 100%;
+    height:50%;
+}
+#login>form>p{
+    margin:5% 0;
+    text-align: center;
+    font-size: 2.5vh;
+}
+#login>form>div{
+    width: 65%;
+    height: 20%;
+    margin: 2% 17.5%;
+}
+#login>form>div>p{
+    width: 100%;
+    height: 50%;
+    text-align: justify;
+    font-size: 2vh;
+    font-weight: 50;
+}
+#login>form>div>input{
+    width: 100%;
+    height: 50%;
+    border-radius: 0.5vh;
+    border: 1px solid black;
+    font-size: 1.7vh;
+    padding-left: 7.5%;
+}
+#login>form>button{
+    width: 65%;
+    height: 10%;
+    margin: 2.5% 17.5%;
+    font-size: 1.7vh;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+#login>form>h4{
+    width: 65%;
+    margin: 0 17.5%;
+}
+#login>form>h4>a{
+    text-decoration: underline;
+}
+#login>button{
+    width: 65%;
+    height: 5%;
+    margin: 5% 17.5%;
+    bottom: 0;
+    border-radius: 0.5vh;
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+}
+#login>button:hover{
+    background: black;
+    color: white;
+}
+
+article#signup-article{
+    background: rgb(0, 0, 0, 0.7);
+    z-index: 10;
+    left: 0;
+}
+article>#signup{
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    backdrop-filter: blur(10.3px);
+    -webkit-backdrop-filter: blur(10.3px);
+    animation: slide 0.5s ease;
+}
+#signup>div>div{
+    font-size: 2.5vh;
+    margin-left: 2.5%;
+}
+#signup>div>button{
+    background-color: transparent;
+    padding: 1%;
+    font-size: 7vh;
+    border: none;
+    cursor: pointer;
+}
+#signup form{
+    width: 100%;
+    height:50%;
+}
+#signup>form>p{
+    margin:5% 0;
+    text-align: center;
+    font-size: 2.5vh;
+}
+#signup>form>div{
+    width: 65%;
+    height: 20%;
+    margin: 2% 17.5%;
+}
+#signup>form>div>p{
+    width: 100%;
+    height: 50%;
+    text-align: justify;
+    font-size: 2vh;
+    font-weight: 50;
+}
+#signup>form>div>input{
+    width: 100%;
+    height: 50%;
+    border-radius: 0.5vh;
+    border: 1px solid black;
+    font-size: 1.7vh;
+    padding-left: 7.5%;
+}
+#signup>form>button{
+    width: 65%;
+    height: 10%;
+    margin: 2.5% 17.5%;
+    font-size: 1.7vh;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+#signup>form>h4{
+    width: 65%;
+    margin: 0 17.5%;
+}
+#signup>form>h4>a{
+    text-decoration: underline;
+}
+#signup>button{
+    width: 65%;
+    height: 5%;
+    margin: 5% 17.5%;
+    bottom: 0;
+    border-radius: 0.5vh;
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+}
+#signup>button:hover{
+    background: black;
+    color: white;
+}
+
+
+main{
+    width: 100%;
+    height: 70%;
+    top: 13%;
+}
+main>div>img{z-index: 1;
+    filter: blur(20px);
+}
+main>section{
+    width: 70%;
+    height: 80%;
+    z-index: 3;
+}
+.slide-me{
+    transition: 0.5s ease;
+}
+main>section>.text{
+    top: 0;
+    z-index: 4;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 2px black;
+    display: grid;
+}
+main>section>.text>p{
+    font-size: 2.5vh;
+    font-weight:900;
+    color: white;
+}
+main>section>.text>h1{
+    font-size: 13vh;
+    color: white;
+    opacity: 0.8;
+}
+
+
+section#items-list{
+    width: 70%;
+    height: 100%;
+    border: 1px solid black;
+    margin: 10% 15%;
+    display: grid;
+    grid-template-columns: ;
+}
+
+
+/* mobile view styling */
+@media only screen  and (max-width : 550px) {
+
+}
+
+
+/* animations */
+@keyframes slide {
+    from{
+        transform: translateX(100%);
+    }to{
+        transform: translateX(0%);
+    }
+}
