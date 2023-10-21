@@ -386,9 +386,13 @@ section#items-list{
     border: 1px solid black;
     margin: 10% 15%;
     display: grid;
-    grid-template-columns: ;
+    grid-template-columns: repeat(3, 1fr);
 }
-
+section#items-list>.card{
+    border: 1px solid red;
+    width: 90%;
+    height: 90%;
+}
 
 /* mobile view styling */
 @media only screen  and (max-width : 550px) {
