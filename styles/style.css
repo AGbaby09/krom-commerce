@@ -86,6 +86,8 @@ img{
 }
 .bxs-heart{
     color: red;
+    /* transition: 0.3s ease; */
+    animation: scale 0.25s ease;
 }
 .banner{
     width: auto;
@@ -96,6 +98,12 @@ img{
     right: -25%;
     color: black;
     font-size: 1.1vh;
+}
+.marquee{
+    animation: marquee 20s linear infinite;
+}
+.marqueE{
+    animation: marqueE 20s linear infinite;
 }
 /* end of custom */
 
@@ -108,11 +116,15 @@ header{
     background-color: white;
     /* border-bottom: 1px solid black; */
     z-index: 5;
+    box-shadow: 0 1px 10px 0px #aaa;
 }
 header nav{
     width: 70%;
     height: 100%;
     margin: 0 15%;
+    background-color: rgb(255, 255, 255, 0.3);
+    backdrop-filter: blur(14.7px);
+    -webkit-backdrop-filter: blur(14.7px);
 }
 header nav>div{
     width: 100%;
@@ -120,15 +132,24 @@ header nav>div{
 }
 div#top>#contacts{
     height: 100%;
-    width: 15%;
+    width: auto;
 }
 div#top>#contacts>ul>li{
-    width: 50%;
+    width: auto;
+    height: auto;
+}
+div#top>#contacts>ul>li:last-child{
+    margin-left: 2.5vh;
+    
 }
 div#top>#contacts>ul>li>a{
     text-align: justify;
     font-size: 1.5vh;
-
+    padding: 0.5vh 0;
+    transition: 0.1s linear;
+}
+div#top>#contacts>ul>li>a:hover{
+    border-bottom: 0.5vh solid black;
 }
 #links{
     height: 100%;
@@ -139,24 +160,33 @@ div#top>#contacts>ul>li>a{
     width:50%;
     justify-content: end;
 }
-#links>li>a{
+#links>li>button{
     font-size: 1.5vh;
+    cursor: pointer;
 }
-#links>li:first-child>a{
+#links>li:first-child>button{
     padding: 8% 20%;
     border-radius: 5vh;
     color: black;
     border: 1px solid black;
-    transition: 0.3s ease;
+    background-color: white;
+    transition: 0.2s linear;
 }
-#links>li:last-child>a{
+#links>li:first-child>button:hover{
+    background-color: rgba(192, 192, 192, 0.294);
+    box-shadow: 0 0 1px 1px #aaa;
+    border: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+#links>li:last-child>button{
     padding: 8% 20%;
     border-radius: 5vh;
-    color: rgb(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255, 0.9);
+    text-shadow: 0 0 2px black;
     border: 1px solid black;
     background: black;
     transition: 0.3s ease;
-}#links>li:last-child>a:hover{
+}#links>li:last-child>button:hover{
     color: white;
 }
 #logo{
@@ -170,7 +200,7 @@ div#top>#contacts>ul>li>a{
     font-size: 1.5vh;
     padding: 1.8% 4%;
     border-radius: 0.5vh;
-    border: 0.1px solid black;
+    border: 0.1px solid rgb(0, 0, 0, 0.5);
     background: transparent;
     cursor: pointer;
     transition: 0.1s ease;
@@ -178,6 +208,7 @@ div#top>#contacts>ul>li>a{
 #categories>button:hover{
     transform: translate(2%, -2%);
     box-shadow: -2px 2px 1px 1px black;
+    border: 1px solid black;
 }
 #icons{
     width: 10%;
@@ -187,7 +218,8 @@ div#top>#contacts>ul>li>a{
     padding: 3%;
     background-color: transparent;
     border-radius: 0.5vh;
-    border: 0.1px solid black;
+    box-shadow: 0 0 1px 1px #aaa;
+    border: none;
     cursor: pointer;
     transition: 0.1s ease;
 }
@@ -203,8 +235,10 @@ div#top>#contacts>ul>li>a{
 article#login-article{
     background: rgb(0, 0, 0, 0.9);
     z-index: 10;
+    top: 0;
 }
 article>#login{
+    top: 0;
     right: 0;
     width: 20%;
     height: 100%;
@@ -265,8 +299,9 @@ article>#login{
     cursor: pointer;
 }
 #login>form>h4{
-    width: 65%;
-    margin: 0 17.5%;
+    width: auto;
+    font-size: 1.7vh;
+    padding: 0 10%;
 }
 #login>form>h4>a{
     text-decoration: underline;
@@ -280,6 +315,7 @@ article>#login{
     border: 1px solid black;
     background-color: transparent;
     cursor: pointer;
+    font-size: 1.7vh;
 }
 #login>button:hover{
     background: black;
@@ -289,9 +325,11 @@ article>#login{
 article#signup-article{
     background: rgb(0, 0, 0, 0.9);
     z-index: 10;
+    top: 0;
     left: 0;
 }
 article>#signup{
+    top:0;
     right: 0;
     width: 20%;
     height: 100%;
@@ -366,6 +404,7 @@ article>#signup{
     border: 1px solid black;
     background-color: transparent;
     cursor: pointer;
+    font-size: 1.7vh;
 }
 #signup>button:hover{
     background: black;
@@ -376,7 +415,7 @@ article>#signup{
 main{
     width: 100%;
     height:75%;
-    top: 13%;
+    margin-top: 6%;
 }
 main>div>img{z-index: 1;
     filter: blur(5px);
@@ -412,30 +451,49 @@ main>section>.text>h1{
 }
 
 section#search{
-    width: 70%;
-    height: 10%;
-    top: 16%;
-    margin: 0 15%;
+    width: 100%;
+    height: 25%;
     border-radius: 0.5vh;
-    background-color: white;
+    /* background-color: teal; */
+}
+#search>.theme{
+    width: 100%;
+    height: 25%;
+    background-color: rgb(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0, 0.4);
+    font-size: 1.7vh;
+    display: flex;
+}
+.two{
+    left: 102.5%;
+    /* margin-left: 5%; */
+}
+.theme1{
+    top: 5%;
+}.theme2{
+    bottom: 5%;
 }
 #search>form{
-    height: 100%;
+    height: 60%;
 }
 #search>form>input{
     width: 45%;
     height: 50%;
     padding-left: 2.5%;
-    border-radius: 50px 0 0 50px;
+    border-radius: 5px 0 0 50px;
     border: 1px solid grey;
     border-right-color: transparent;
     outline: none;
     font: 3vh;
+    font-size: 1.7vh;
+}#search>form>input::placeholder{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.7vh;
 }
 #search>form>button{
     width: 5%;
     height: 50%;
-    border-radius: 0 50px 50px 0;
+    border-radius: 0 50px 5px 0;
     border: 1px solid grey;
     transition: 0.2s ease;
     cursor: pointer;
@@ -454,8 +512,7 @@ section#search{
 section#items-list{
     width: 70%;
     height: auto;
-    margin: 10% 15% 0 15%;
-    top: 2.5%;
+    margin: 0 15%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 5vh;
@@ -478,6 +535,7 @@ section#items-list>.card>#item-img{
     height: 67%;
     cursor:zoom-in;
     cursor:-moz-zoom-in;
+    overflow: hidden;
 }
 section#items-list>.card>#tag{
     bottom: 0;
@@ -619,6 +677,36 @@ article>#cart{
     text-align: center;
     padding: 5% 0;
 }
+#cart-list{
+    width: 100%;
+    height: 70%;
+    border: 1px solid teal;
+    margin-bottom: 2%;
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+}
+#cart-list>.tab{
+    background-color: black;
+    width: 95%;
+    height: 15%;
+    margin: 2.5% 2.5%;
+}
+#cart-list>.tab>button{
+    color:white;
+    right: 0;
+    height: 100%;
+    width: 20%;
+    background-color: rgb(0, 0, 0, 0.4);
+    font-size: 5vh;
+    outline: none;
+}
+.fee{
+    width: 100%;
+    height: 4%;
+    padding: 0 10%;
+    font-size: 1.5vh;
+}
+
 #cart>button{
     width: 80%;
     height: 5%;
@@ -628,10 +716,27 @@ article>#cart{
     border: 1px solid black;
     background-color: transparent;
     cursor: pointer;
+    font-size: 1.7vh;
 }
 #cart>button:hover{
     background: black;
     color: white;
+}
+
+#addedToCart{
+    border: 2.5px solid rgb(85, 213, 85);
+    left: 50%;
+    top: 20%;
+    background-color: white;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 50px;
+    font-size: 2vh;
+    transform: translate(-50%, -20%);
+    z-index: 10;
+    animation: scaleCart 0.2s ease;
+    color: rgb(85, 213, 85);
+    text-shadow: 0 0 1px lime;
 }
 
 article#wish-article{
@@ -680,9 +785,28 @@ article>#wish{
     color: white;
 }
 
+article#side-menu{
+    background-color: rgb(0, 0, 0);
+    width: 14%;
+    height: 88%;
+    left: 0;
+    top: 12%;
+    animation: slidee 0.5s ease;
+}
+article#side-Menu{
+    background-color: rgb(0, 0, 0);
+    width: 14%;
+    height: 88%;
+    right: 0;
+    top: 12%;
+    animation: slide 0.5s ease;
+}
+#side-menu>img, #side-Menu img{
+    opacity: 0.4;
+}
 /* mobile view styling */
 @media only screen  and (max-width : 550px) {
-
+    body{height: 100svh;}
 }
 
 
@@ -699,5 +823,35 @@ article>#wish{
         transform: translateX(-100%);
     }to{
         transform: translateX(0%);
+    }
+}
+@keyframes scale {
+    from{
+        transform: scale(0.7);
+    }to{
+        transform: scale(1);
+    }
+}
+@keyframes scaleCart {
+    from{
+        transform: translate(-50%, -20%) scale(0.5);
+    }to{
+        transform: translate(-50%, -20%) scale(1);
+    }
+}
+@keyframes marquee {
+    from{
+        transform: translate(0%);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+@keyframes marqueE {
+    from{
+        transform: translate(-100%);
+    }
+    to{
+        transform: translate(0%);
     }
 }
