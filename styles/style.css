@@ -980,6 +980,9 @@ article#side-Menu{
         top: 0;
         height: 100%;
     }
+    #modal-img>img{
+        object-fit: cover;
+    }
     #modal-desc{
         bottom: 0;
         width: 30%;
