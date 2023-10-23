@@ -871,6 +871,21 @@ article#side-Menu{
     article#side-Menu{
         display: none;
     }
+
+    section#search{
+        /* border: 5px solid red; */
+    }
+    #search>form{
+        height: 40%;
+    }
+    #search>form>input{
+        width: 70%;
+        border-radius: 5px 0 0 5px;
+    }
+    #search>form>button{
+        border-radius: 0 5px 5px 0;
+        width: 15%;
+    }
 }
 
 
