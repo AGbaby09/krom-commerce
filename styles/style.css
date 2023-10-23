@@ -958,6 +958,14 @@ article#side-Menu{
         border-radius: 0 5px 5px 0;
         width: 15%;
     }
+
+    article>#login, article>#signup, article>#cart, article>#wish{
+        width:100%;
+    }
+
+    #addedToCart{
+        width:60vw;
+    }
 }
 
 
