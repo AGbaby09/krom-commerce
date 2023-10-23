@@ -817,14 +817,15 @@ article#side-Menu{
     body{height: 100svh;max-width: 100vw;}
     main{
         height: 50%;
+        margin-top: 12vh;
     }
-    main>section{width: 100%;height: 100%;}
+    main>section{width: 100%;height: 70%;}
     main>section>.text{
         width: 100%;
         height: 20%;
         left: 50%;
-        top: 60%;
-        transform: translate(-50%, -60%);
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
     main>section>.text>h1{
         font-size: 5vh;
