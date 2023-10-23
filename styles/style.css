@@ -15,6 +15,7 @@
 body{
     position: relative;
     max-width: 100vw;
+    width: 100vw;
     height: 100vh;
     font-family: "Poppins", sans-serif;
 }
@@ -806,7 +807,63 @@ article#side-Menu{
 }
 /* mobile view styling */
 @media only screen  and (max-width : 550px) {
-    body{height: 100svh;}
+    body{height: 100svh;max-width: 100vw;}
+    main{
+        height: 50%;
+    }
+    main>section{width: 100%;height: 100%;}
+    main>section>.text{
+        width: 30%;
+        height: 30%;
+    }
+    main>section>.text>h1{
+        font-size: 7vh;
+        height: 5vh;
+    }
+    section#items-list{
+        gap: 1%;
+        left: 0;
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+    header{
+        max-width: 100vw;
+    }
+    header nav{
+        display: none;
+    }
+    section#items-list>.card{
+        width: 100%;
+        height: 30vh;
+    }
+    section#items-list>.card>#toCart{
+        width: 80%;margin: 0 10%;
+        font-size: 1.5vh;
+        bottom: 3%;
+    }
+    section#items-list>.card>#toCart>i{
+        font-size: 2vh;
+    }
+    section#items-list>.card>#tag>h3, section#items-list>.card>#tag>p{
+        font-size: 1.5vh;
+    }
+    section#items-list>.card>#tag>button{
+        font-size: 2.5vh;
+        padding: 2.5%;
+        right: 10%;
+    }
+    section#items-list>.card>#tag>h3, section#items-list>.card>#tag>p{
+        margin: 0 11%;
+    }
+
+    article#side-menu{
+        display: none;
+    }
+    article#side-Menu{
+        display: none;
+    }
 }
 
 
