@@ -818,7 +818,7 @@ article#side-Menu{
 }
 /* mobile view styling */
 @media only screen  and (max-width : 550px) {
-    body{height: 100vh;max-width: 100vw;}
+    body{height: 100dvh;max-width: 100vw;}
     main{
         height: 50%;
         margin-top: 12vh;
