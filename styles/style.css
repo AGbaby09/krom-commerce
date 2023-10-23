@@ -820,12 +820,20 @@ article#side-Menu{
     }
     main>section{width: 100%;height: 100%;}
     main>section>.text{
-        width: 30%;
-        height: 30%;
+        width: 100%;
+        height: 20%;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -60%);
     }
     main>section>.text>h1{
-        font-size: 7vh;
-        height: 5vh;
+        font-size: 5vh;
+        height: auto;
+        text-align: center;
+    }
+    main>section>.text>p{
+        height: auto;
+        font-size: 1.8vh;
     }
     section#items-list{
         gap: 1%;
