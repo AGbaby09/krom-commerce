@@ -884,18 +884,17 @@ article#side-Menu{
     #links{
         left: 0;
         width: auto;
-        /* border: 1px solid red; */
+        flex-direction: row-reverse;
     }#links>li{
         justify-content: start;
         width:auto;
-        /* border: 1px solid red; */
     }#links>li:first-child>button{
         background-color: rgba(192, 192, 192, 0.294);
         box-shadow: 0 0 1px 1px #aaa;
         border: none;
         color: rgba(0, 0, 0, 0.6);
     }#links>li:last-child>button{
-        margin-left: 1.5vw;
+        margin-right: 1.5vw;
     }#links>li>button{
         width: 25vw;
     }
