@@ -119,6 +119,21 @@ window.addEventListener("DOMContentLoaded", ()=>{
             side_Menu.classList.add("invisible")
         } 
     })
+
+    const menu = document.querySelector("#nav-menu");
+    const nav = document.querySelector("#contacts");
+
+    if(window.innerWidth < 551){
+        menu.addEventListener("click", ()=>{
+            if (menu.querySelector("i").classList.contains("bx-menu")){
+                menu.querySelector("i").classList.replace("bx-menu", "bx-x")
+                nav.style.transform = "translateX(0%)"
+            }else{
+                menu.querySelector("i").classList.replace("bx-x", "bx-menu")
+                nav.style.transform = "translateX(-110%)"
+            }
+        })
+    }
 })
 
 

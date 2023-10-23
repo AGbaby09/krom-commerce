@@ -129,6 +129,11 @@ header nav{
 header nav>div{
     width: 100%;
     height: 50%;
+    z-index: 1;
+    background-color: white;
+}
+#nav-menu{
+    display: none;
 }
 div#top>#contacts{
     height: 100%;
@@ -861,7 +866,7 @@ article#side-Menu{
         display: none;
     }#icons{
         width: 30%;
-        right: 5%;
+        right: 2.5%;
     }
     div#top>#contacts{
         position: absolute;
@@ -869,6 +874,9 @@ article#side-Menu{
         width: 100%;
         height: 200%;
         background-color: rgba(255, 255, 255, 0.547);
+        transition: 0.5s ease;
+        transform: translateX(-110%);
+        z-index: -1;
     }div#top>#contacts>ul{
         display: grid;
         grid-template-columns: 1fr;
@@ -879,6 +887,12 @@ article#side-Menu{
         margin-left: 0;
     }div#top>#contacts>ul>li>a{
         padding: 0;
+    }
+    #nav-menu{
+        display:grid;
+        font-size: 4vh;
+        background: transparent;
+        border: none;
     }
 
     #links{
