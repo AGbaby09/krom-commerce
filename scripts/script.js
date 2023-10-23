@@ -1,3 +1,7 @@
+// SCROLL
+let items_list = document.getElementById("items-list");
+// END OF SCROLL
+
 // LOGIN
 let closeLogin = document.getElementById("close-login")
 let loginArticle = document.getElementById("login-article")
@@ -107,7 +111,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
     carouselMe();
     
     window.addEventListener("scroll", ()=>{
-        if(window.scrollY > 975){
+        if(window.scrollY > (items_list.offsetTop - 50)){
             side_menu.classList.remove("invisible")
             side_Menu.classList.remove("invisible")
         }else{

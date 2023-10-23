@@ -124,6 +124,7 @@ const products = [
 
 window.addEventListener("DOMContentLoaded", ()=>{
     let items_list = document.getElementById("items-list");
+    
 
     
     function displayItems(products){
@@ -166,7 +167,6 @@ window.addEventListener("DOMContentLoaded", ()=>{
     })
     
     const add_Cart = document.getElementById("addedToCart")
-    let cart_items_list = [];
     let cart_list = document.querySelector("#cart-list");
     let cards = document.querySelectorAll(".card")
     const cartBanner = document.getElementById("cartBanner")
@@ -183,12 +183,6 @@ window.addEventListener("DOMContentLoaded", ()=>{
             console.log(card.querySelector("#tag").querySelector("#tag-name").textContent)
             console.log(card.querySelector("#item-img").querySelector("img").getAttribute("src"))
             console.log(card.querySelector("#tag").querySelector("#tag-price").textContent)
-
-           
-            cart_items_list.push({
-                img: `${card.querySelector("#item-img").querySelector("img").getAttribute("src")}`,
-                price: `${card.querySelector("#tag").querySelector("#tag-price").textContent}`,
-            })
             
             cart_list.appendChild(some_name(card.querySelector("#item-img").querySelector("img").getAttribute("src")))
             cartBanner.textContent = `${cart_list.querySelectorAll("div").length}`
