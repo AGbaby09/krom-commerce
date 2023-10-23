@@ -18,10 +18,10 @@ let signupLink = document.getElementById("signup-link")
 // CART
 let closeCart = document.getElementById("close-cart")
 let cartArticle = document.getElementById("cart-article")
-function closeCartButton(){
+async function closeCartButton(){
     cartArticle.classList.replace("visible", "invisible")
 }
-function openCartButton(){
+async function openCartButton(){
     cartArticle.classList.replace("invisible", "visible")
 }
 // END OF CART
@@ -29,10 +29,10 @@ function openCartButton(){
 // WISH
 let closeWish = document.getElementById("close-wish")
 let wishArticle = document.getElementById("wish-article")
-function closeWishButton(){
+async function closeWishButton(){
     wishArticle.classList.replace("visible", "invisible")
 }
-function openWishButton(){
+async function openWishButton(){
     wishArticle.classList.replace("invisible", "visible")
 }
 // END OF WISH
@@ -43,7 +43,7 @@ let modalArticle = document.getElementById("modal-article")
 let modalName = document.getElementById("modal-name")
 let modalCost = document.getElementById("modal-cost")
 let modalImg = document.getElementById("modal-img").querySelector("img")
-function closeModals(){
+async function closeModals(){
     modalArticle.classList.replace("visible", "invisible")
 }
 // END OF MODAL
@@ -54,7 +54,7 @@ const carouselText = document.getElementById('carouselText')
 // END OF CAROUSEL
 
 // LOGIN/SIGNUP PROCESS
-function login(){
+async function login(){
     loginButton.addEventListener("click", ()=>{
         loginArticle.classList.remove("invisible")
     })
@@ -62,25 +62,25 @@ function login(){
         signupArticle.classList.remove("invisible")
     })
 }
-function logit(){
+async function logit(){
     signupArticle.classList.add("invisible")
     loginArticle.classList.remove("invisible")
 }
-function closeLoginButton(){
+async function closeLoginButton(){
     loginArticle.classList.add("invisible")
 }
-function signup(){
+async function signup(){
     loginArticle.classList.add("invisible")
     signupArticle.classList.remove("invisible")
 }
-function closeSignupButton(){
+async function closeSignupButton(){
     signupArticle.classList.add("invisible")
 }
 //END LOGIN/SIGNUP PROCESS
 
 
 // CAROUSELLING
-function carouselMe(){
+async function carouselMe(){
     carousels.forEach(  carousel => {
         for(let i = 0 ; i < carousel.querySelectorAll("img").length; i++){
             carousel.querySelectorAll("img")[i].style.left = `${i}00%`
