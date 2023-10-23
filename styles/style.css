@@ -594,7 +594,7 @@ section#items-list>.card>#toCart>i{
     top: 0;
     transition: 0.3s ease;
 }
-#modal>button{
+#modal>#close-modal{
     top: 0;
     right: 0;
     z-index: 4;
@@ -602,6 +602,7 @@ section#items-list>.card>#toCart>i{
     background-color: transparent;
     border: none;
     cursor: pointer;
+    color: white;
 }
 #modal{
     width: 50%;
@@ -610,12 +611,12 @@ section#items-list>.card>#toCart>i{
     border-radius: 1.5vh;
     overflow: hidden;
 }
-.modal-view{
-    width: 50%;
+#modal-img{
+    width: 100%;
     height: 100%;
 }
 #modal-img>img{
-    object-fit:cover;
+    object-fit:contain;
     cursor: pointer;
 }
 #modal-desc{
@@ -623,18 +624,6 @@ section#items-list>.card>#toCart>i{
     /* background-image:url("../assets/images/rainy.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
-}
-#modal-desc>#add{
-    bottom: 35%;
-    width: 50%;
-    height: 7.5%;
-    margin: 0 25%;
-    border-radius: 5vh;
-    border: 1px solid grey;
-    font-size: 1.8vh;
-    cursor: pointer;
-    transition: 0.2 ease;
-    background-color: white;
 }
 #modal-desc>#add>i{
     font-size: 3vh;
@@ -988,31 +977,24 @@ article#side-Menu{
         width: 100%;
     }
     #modal-img{
-        position: absolute;
         top: 0;
-        height: 60%;
+        height: 100%;
     }
     #modal-desc{
-        position: absolute;
         bottom: 0;
-        height: 40%;
+        width: 30%;
+        height: 10%;
+        background-color: rgba(255, 255, 255, 0.3);
     }
     #modal-desc>h1{
         margin-top: 0%;
         font-size: 2.5vh;
     }
     #modal-desc>h2, #modal-desc>p{
-        font-size: 2vh;
+        font-size: 2.5vh;
+        font-weight: 600;
     }    
-    #modal-desc>#add{
-        width: 70%;
-        height: 20%;
-        margin: 0 15%;
-        bottom: 10%;
-        background-color: black;
-        color: white;
-    }
-    #modal>button{
+    #modal>#close-modal{
         color: white;
         text-shadow: 0 0 1px black;
     }

@@ -175,7 +175,6 @@ window.addEventListener("DOMContentLoaded", ()=>{
         card.querySelector("#item-img").addEventListener("click", (e)=>{
             modalArticle.classList.replace("invisible", "visible")
             modalImg.setAttribute("src", e.target.getAttribute("src"))
-            modalName.innerText = card.querySelector("#tag").querySelector("#tag-name").textContent;
             modalCost.innerText = card.querySelector("#tag").querySelector("#tag-price").textContent;
         })
 
