@@ -965,6 +965,11 @@ article#side-Menu{
 
     #addedToCart{
         width:60vw;
+        height: 3vh;
+        top: 10%;
+        transform: translate(-50%, -10%);
+        animation: scaleCarts 0.2s ease;
+        font-size: 1.7vh;
     }
 }
 
@@ -996,6 +1001,13 @@ article#side-Menu{
         transform: translate(-50%, -20%) scale(0.5);
     }to{
         transform: translate(-50%, -20%) scale(1);
+    }
+}
+@keyframes scaleCarts {
+    from{
+        transform: translate(-50%, -10%) scale(0.5);
+    }to{
+        transform: translate(-50%, -10%) scale(1);
     }
 }
 @keyframes marquee {
